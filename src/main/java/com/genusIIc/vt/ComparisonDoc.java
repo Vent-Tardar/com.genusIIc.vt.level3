@@ -1,17 +1,23 @@
 package com.genusIIc.vt;
 
 import java.io.*;
+import org.apache.logging.log4j.*;
 
 public class ComparisonDoc {
-    private void checkingFiles(String org, String mdf) throws Exception {
+    private static final Logger logger = LogManager.getLogger(Main.class);
+    private void checkingFiles(String org, String mdf) {
         if(!(new File(org).exists() && new File(mdf).exists())) {
-            throw new Exception("No files found");
+            System.out.println();
+            logger.error("A non-existent file is entered in the parameters");
         }
 
-        if (org.equals(mdf)) throw new Exception("The same file was specified");
+        if (org.equals(mdf)) {
+            System.out.println();
+            logger.error("The same file was entered in the parameters");
+        }
     }
 
-    public void compare(String org, String mdf) throws Exception {
+    public void compare(String org, String mdf){
         checkingFiles(org, mdf);
         try(BufferedReader br_1 = new BufferedReader(new FileReader(org));
             BufferedReader br_2 = new BufferedReader(new FileReader(mdf))){
@@ -28,8 +34,7 @@ public class ComparisonDoc {
             }
         }
         catch (Exception e){
-            System.out.println();
-            System.err.println("Somewhere in the loop is an error: " + e.getMessage());
+            System.err.println(e.getMessage());
         }
     }
 }
