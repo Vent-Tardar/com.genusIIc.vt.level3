@@ -9,6 +9,8 @@ This program compares the original file with the modified one. In order for the 
 
 *If the file is located elsewhere, specify the full path to it. For example: C:\\Users\\User\\Documents\\test\\test1.txt*
 
+***If the program did not work for any reason, then look into the Error.log***
+
 ### Files:
 
 * Test files;
