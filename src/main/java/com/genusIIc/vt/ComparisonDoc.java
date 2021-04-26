@@ -22,8 +22,12 @@ public class ComparisonDoc {
         try(BufferedReader br_1 = new BufferedReader(new FileReader(org));
             BufferedReader br_2 = new BufferedReader(new FileReader(mdf))){
 
+            logger.info("File comparison started.");
+
             int i = 1;
             String orgFile, mdfFile;
+
+            logger.info("Files are being compared.");
 
             while (((orgFile = br_1.readLine()) != null)
                     && ((mdfFile = br_2.readLine()) != null)) {
@@ -32,6 +36,7 @@ public class ComparisonDoc {
                 }
                 i++;
             }
+            logger.info("File comparison ended.");
         }
         catch (Exception e){
             System.err.println(e.getMessage());
