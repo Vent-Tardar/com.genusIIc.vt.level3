@@ -1,4 +1,4 @@
-# Program for comparing the original and modified file in Java using Gradle
+# Program for comparing the original and modified files in Java using Gradle
 
 ### Description
 
