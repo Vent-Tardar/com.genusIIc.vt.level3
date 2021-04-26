@@ -13,9 +13,9 @@
     </Appenders>
     <Loggers>
         <Root level="trace">
-            <AppenderRef ref="Console" level = "ERROR"/>
-            <AppenderRef ref="Error" level = "ERROR"/>
-            <AppenderRef ref="Info" level = "INFO"/>
+            <AppenderRef ref="Console" level="ERROR"/>
+            <AppenderRef ref="Error" level="ERROR"/>
+            <AppenderRef ref="Info" level="INFO"/>
         </Root>
     </Loggers>
 </Configuration>
