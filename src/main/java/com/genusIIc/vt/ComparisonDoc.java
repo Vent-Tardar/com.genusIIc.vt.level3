@@ -32,7 +32,7 @@ public class ComparisonDoc {
             while (((orgFile = br_1.readLine()) != null)
                     && ((mdfFile = br_2.readLine()) != null)) {
                 if (!orgFile.equals(mdfFile)) {
-                    System.out.printf("%d: <modified line value for line %d>\n", i, i);
+                    System.out.printf("line %d: %s => %s\n", i, orgFile, mdfFile);
                 }
                 i++;
             }
